@@ -42,3 +42,18 @@ flowchart TD;
   <li>m es el número del cual se quiere calcular la raíz cuadrada.</li>
 </ul>
 <p>Isaac Newton, uno de los científicos más influyentes de la historia, postuló esté método como una técnica para encontrar raíces de ecuaciones en su obra "Método de las Fluxiones" (escrita alrededor de 1669). Sin embargo, Newton nunca publicó formalmente sus trabajos de método numéricos y cálculo en su tiempo. Por otro lado, Joseph Raphson, un matemático y teólogo inglés, fue el primero en publicar formalmente el método de Newton en su libro "Análisis Aritmético" (1690), lo que le valió el reconocimiento por este método y llevó a que se le conociera con su nombre.</p>
+
+<p>Algoritmo planteado:</p>
+
+```mermaid
+flowchart TD;
+    A[Inicio] -->|Ingrese un número n| B(a = n/2)
+    B --> C(b = 0)
+    C --> D{b != a}
+    D -->|Sí| E{a = b}
+    E --> G(a + n /a)
+    G --> H(a/2)
+    H --> D
+    D -->|No| F(a = raiz cuadrada del número)
+    F --> I(Fin)
+```
